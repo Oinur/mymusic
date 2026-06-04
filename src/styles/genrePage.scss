@@ -1,0 +1,36 @@
+.genre{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.genre__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.genre__name{
+    color: white;
+}
+.genre__cover{
+    aspect-ratio: 1/1;
+    height: 500px;
+    border-radius: 25px;
+    object-fit:cover;
+    object-position: top;
+    box-shadow: 0px 0px 1px white;
+}
+.genre__tracks-section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.genre__tracks-list{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

@@ -1,0 +1,50 @@
+.notification{
+    bottom: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.notification.show{
+    animation: show 0.4s ease-in forwards;
+}
+.notification.hide{
+    animation: hide 0.4s ease-in forwards;
+}
+.notification__block{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+    column-gap: 5px;
+    box-shadow: 0px 2px 5px;
+}
+.notification__text{
+    font-weight: 500;
+}
+.notification__success-image{
+    height: 20px;
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+        bottom: 0px;
+    }
+    to{
+        opacity: 1;
+        bottom: 100px;
+    }
+}
+
+@keyframes hide {
+    from {
+        bottom: 100px;
+    }
+    to{
+        bottom: 0px;
+        opacity: 0;
+    }
+}

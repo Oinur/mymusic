@@ -1,0 +1,135 @@
+$bg-light:#cfcfcf;
+$block-color:#ffffff;
+$text-color-primary:#1a1a1a;
+$text-color-secondary:#666666;
+$active-color:#0df2b9;
+$active-color-hover:#0bcfa0;
+$border-radius:15px;
+$padding:10px;
+$margin:10px;
+
+
+.album{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.album__info{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    background-size: cover;
+    background-position: bottom;
+}
+.album__mainInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+}
+.album__name{
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.album__cover{
+    aspect-ratio: 1/1;
+    height: 320px;
+    border-radius: 25px;
+    object-fit:cover;
+    object-position: top;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px black;
+}
+.album__tracks-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.album__tracks-list{
+    padding-inline: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.album__subscribe-btn{
+    padding: 10px;
+    width: auto;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: $active-color-hover;
+    border: 2px white solid;
+    transition: 0.2s;
+    color: white;
+    opacity: 1;
+    font-size: 18px;
+}
+
+.album__subscribe-btn:hover{
+    background-color: $active-color-hover;
+}
+
+.album__featured-playlists-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.album__featured-playlists-title{
+    padding-inline: 20px;
+}
+.album__featured-playlists{
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.album__featured-playlists-item{
+    width: 200px;
+    height: 200px;
+}
+
+.album__banner {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1{
+        text-shadow: 0px 0px 5px black;
+    }
+    p{
+    padding-inline:20%;
+    font-size: 20px;
+    }
+}
+
+.album__banner::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(5px);
+
+  transform: scale(1.1);
+
+  z-index: 1;
+}

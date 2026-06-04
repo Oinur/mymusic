@@ -1,0 +1,98 @@
+$bg-light:#cfcfcf;
+$block-color:#ffffff;
+$text-color-primary:#1a1a1a;
+$text-color-secondary:#666666;
+$active-color:#0df2b9;
+$active-color-hover:#0bcfa0;
+$border-radius:15px;
+$padding:10px;
+$margin:10px;
+
+
+.track-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgb(226, 226, 226);
+    column-gap: 5px;
+    transition: 0.2s;
+}
+.track-item:hover{
+    background-color: rgba(143, 143, 143, 0.452);
+    transition: 0.2s;
+    p {
+        color: white;
+    }
+    h4{
+        color: white;
+    }
+    .track__duration-img{
+        filter: invert(1);
+    }
+    .track__auditionImg{
+        filter: invert(1);
+    }
+    .track-item__play-btn{
+        color: white;
+    }
+}
+.track-item.active{
+    background: $active-color-hover;
+    color: white;
+    transition: 0.2s;
+    .track-item__play-btn{
+        color: white;
+    }
+    p,h4{
+        color: white;
+    }
+    .track__duration-img{
+        filter: invert(1);
+    }
+    .track__auditionImg{
+        filter: invert(1);
+    }
+}
+.track-item__main-info{
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.track-item__track-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+}
+.track-item__play-btn{
+    min-width: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+}
+.track__audition-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    span{
+        display: flex;
+        justify-content: space-between;
+        text-align: end;
+        column-gap: 15px;
+    }
+}
+.track__auditionImg{
+    height: 20px;
+}
+.track__duration-container{
+    height: 100%;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+.track__duration-img{
+    height: 15px;
+}
