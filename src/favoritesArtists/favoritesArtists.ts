@@ -1,4 +1,4 @@
-import { Album, Track } from "../music/musicDB";
+import { Album} from "../music/musicDB";
 import { FavoritesArtistsStorage } from "./FavoritesArtistsStorage";
 
 export class FavoritesArtists {

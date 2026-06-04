@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo, useRef } from 'react';
 import { ReactNode } from 'react';
 import { BrowserRouter, Routes, Route, Link, Outlet, NavLink } from 'react-router-dom';
 import logo from './images/MyMusic logo light.png'
-import darkLogo from './images/MyMusic logo dark.png'
 import './App.scss';
 import FavoritePage from './pages/FavoritePage/Favorite';
 import AlbumPage from './pages/AlbumPage/AlbumPage';
@@ -11,21 +10,17 @@ import { SearchInput } from './shared/ui/SearchInput/SearchInput';
 import favoriteIcon from './images/favorite-icon.png'
 import homeIcon from './images/home-icon.png'
 import { player } from './player/player';
-import { Track, Tracks, Album, Albums, Genre } from './music/musicDB';
+import { Track, Tracks, Album, Genre } from './music/musicDB';
 import musicLogo from './images/music-logo-placeholder.jpg'
 import volumeIcon from './images/volume-icon.svg'
 import shuffleIcon from './images/shuffle-icon.svg'
 import repeatIcon from './images/repeat-play.svg'
-import { Favorites } from './favorites/Favorites';
 import addToFavIcon from './images/favorite.png'
 import addedToFavIcon from './images/favorite-added.png'
-
 import HM2 from '../src/images/HM2-album.jpg'
 import { TrackItem } from './shared/ui/TrackItem';
 import { Genres } from './music/musicDB';
-import { FavoritesArtists } from './favoritesArtists/favoritesArtists';
 import { Notification } from './shared/ui/Notification';
-
 import { favoritesArtists } from './favoritesArtists/favoritesArtists';
 import { favoritesTracks } from './favorites/Favorites';
 
@@ -42,7 +37,7 @@ function Header(){
   return (
     <header>
       <Link to={'/'}>
-        <img src={logo} className='logo'/>
+        <img src={logo} className='logo' alt='logo'/>
       </Link>
       <div className='search-bar-container'>
         <SearchInput
@@ -121,7 +116,7 @@ const NavigationBar = () => {
             {({ isActive }) => (
               <>
                 <div className={`item-fill ${isActive ? 'active' : ''}`} />
-                <img src={homeIcon} style={{ height: '50px', zIndex: 2 }} />
+                <img src={homeIcon} style={{ height: '50px', zIndex: 2 }} alt='home'/>
                 <div className="nav-list-item-about-container">
                   <h3 className="list-item-name">Главная</h3>
                 </div>
@@ -134,7 +129,7 @@ const NavigationBar = () => {
             {({ isActive }) => (
               <>
                 <div className={`item-fill ${isActive ? 'active' : ''}`} />
-                <img src={favoriteIcon} style={{ height: '50px', zIndex: 2 }} />
+                <img src={favoriteIcon} style={{ height: '50px', zIndex: 2 }} alt='favorite'/>
                 <div className="nav-list-item-about-container">
                   <h3 className="list-item-name">Любимые треки</h3>
                   <p className="list-item-quantity">{favoritesTracksQuantity || 0} треков</p>
@@ -158,7 +153,7 @@ const NavigationBar = () => {
                 <li key={artist.id} className='nav-list__artist-item'>
                   <NavLink to={`/album/${artist.id}`} style={{display:'flex', alignItems:'center',columnGap:'10px'}}>
                     <div>
-                      <img src={artist.album_cover} className='nav-list__artist-cover'/>
+                      <img src={artist.album_cover} className='nav-list__artist-cover' alt='album_cover'/>
                     </div>
                     <div>
                       <h3 style={{margin:'0', padding:'0'}}>{artist.title}</h3>
@@ -302,7 +297,7 @@ function PlayerBar({
       </div>
 
       <div className='player-bar__additional-control'>
-        <img src={volumeIcon} className='player-bar__volume-icon'/>
+        <img src={volumeIcon} className='player-bar__volume-icon' alt='volume'/>
         <input 
         type='range'
         min={0}
@@ -383,6 +378,7 @@ return (
             <img
               src={HM2}
               className='albumHM2__img'
+              alt='HM2'
             />
           </NavLink>
           <button 
@@ -429,6 +425,7 @@ return (
                     <img 
                       src={genre.cover}
                       className='genres__cover'
+                      alt='genre-cover'
                     />
                     <h3 className='genres__genre-title'>
                       {genre.title}

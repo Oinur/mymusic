@@ -1,4 +1,3 @@
-
 import '../../styles/genrePage.scss'
 import { TrackItem } from "../../shared/ui/TrackItem";
 import { player } from "../../player/player";

@@ -1,4 +1,4 @@
-import { Album, Track } from "../music/musicDB"
+import { Album} from "../music/musicDB"
 
 export class FavoritesArtistsStorage {
     save (artist : Album[]) {

@@ -4,7 +4,6 @@ import { TrackItem } from "../../shared/ui/TrackItem";
 import { player } from "../../player/player";
 import { useParams } from "react-router-dom";
 import { Tracks } from "../../music/musicDB";
-import daveBackground from '../../images/dave-background.jpg'
 import { Genres } from "../../music/musicDB";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
@@ -28,14 +27,6 @@ export default function AlbumPage(){
             favoritesArtists.unsubscribe(update)
         }
     },[])
-
-
-    function subscribeCheck(){
-       const favoritesArtistsList = favoritesArtists.getAll()
-       return favoritesArtistsList.includes(album[0])
-    }
-
-
     const featuredAlbums = Genres.filter((genre) =>
         tracks.some((track) =>
           track.tags.includes(genre.id)
@@ -51,7 +42,7 @@ export default function AlbumPage(){
                 <img
                     className="album__cover"
                     src={album[0].album_cover}
-                    
+                    alt="album-cover"
                 />
                 <div className="album__mainInfo">
                     <h1 className="album__name">
@@ -97,6 +88,7 @@ export default function AlbumPage(){
                                             <img 
                                             src={album.cover}
                                             className='genres__cover'
+                                            alt="albumCover"
                                             />
                                             <h3 className='genres__genre-title'>
                                             {album.title}
