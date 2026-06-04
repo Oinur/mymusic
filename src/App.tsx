@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo, useRef } from 'react';
+import React, { useEffect, useState, useMemo} from 'react';
 import { ReactNode } from 'react';
 import { BrowserRouter, Routes, Route, Link, Outlet, NavLink } from 'react-router-dom';
 import logo from './images/MyMusic logo light.png'
@@ -23,12 +23,6 @@ import { Genres } from './music/musicDB';
 import { Notification } from './shared/ui/Notification';
 import { favoritesArtists } from './favoritesArtists/favoritesArtists';
 import { favoritesTracks } from './favorites/Favorites';
-
-
-
-type LayoutProps = {
-  children: ReactNode;
-};
 
 
 function Header(){
@@ -342,7 +336,6 @@ const Layout= () => {
 
   
 export  function HomePage () {
-  const [currentTrack, setCurrentTrack] = useState<Track | null> (null);
   const [isPlaying, setIsPlaying] = useState<Boolean>(false)
   const hm2_tracks = useMemo(() => {
   return Tracks.filter(t => t.albumId === 1);
@@ -351,7 +344,6 @@ export  function HomePage () {
   useEffect(() => {
     function update(){
       setIsPlaying(player.getPlayStatus())
-      setCurrentTrack(player.getInfo())
     }
     player.subscribe(update)
 

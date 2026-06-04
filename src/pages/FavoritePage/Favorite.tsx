@@ -7,7 +7,6 @@ import { player } from '../../player/player';
 import { favoritesTracks } from '../../favorites/Favorites';
 
 export default function FavoritePage(){
-    const favorites = new Favorites();
     const [tracks, setTracks] = useState<Track[]>([])
 
     useEffect(() => {

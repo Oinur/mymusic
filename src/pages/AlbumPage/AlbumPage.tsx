@@ -1,4 +1,4 @@
-import { Album, Albums, Track } from "../../music/musicDB";
+import { Albums} from "../../music/musicDB";
 import '../../styles/albumPage.scss'
 import { TrackItem } from "../../shared/ui/TrackItem";
 import { player } from "../../player/player";
@@ -26,7 +26,7 @@ export default function AlbumPage(){
         return () => {
             favoritesArtists.unsubscribe(update)
         }
-    },[])
+    },[album])
     const featuredAlbums = Genres.filter((genre) =>
         tracks.some((track) =>
           track.tags.includes(genre.id)
