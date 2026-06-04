@@ -1,4 +1,3 @@
-import { Favorites } from '../../favorites/Favorites'
 import { Track } from '../../music/musicDB';
 import { TrackItem } from '../../shared/ui/TrackItem';
 import { useEffect, useState } from 'react';

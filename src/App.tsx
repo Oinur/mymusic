@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo} from 'react';
-import { ReactNode } from 'react';
 import { BrowserRouter, Routes, Route, Link, Outlet, NavLink } from 'react-router-dom';
 import logo from './images/MyMusic logo light.png'
 import './App.scss';
@@ -262,7 +261,7 @@ function PlayerBar({
 
       <div className='player-bar__main-control'>
         <div className='player-bar__control-btns'>
-          <button onClick={() => {player.setOnRepeat()}} style={{display:'flex',justifyContent:'center',alignItems:'end'}}><img src={repeatIcon} style={{height:'25px', filter:`${isOnRepeat ? 'invert(53%) sepia(92%) saturate(1624%) hue-rotate(126deg) brightness(104%) contrast(91%)' : ''}`}}/></button>
+          <button onClick={() => {player.setOnRepeat()}} style={{display:'flex',justifyContent:'center',alignItems:'end'}}><img alt='repeatIcon' src={repeatIcon} style={{height:'25px', filter:`${isOnRepeat ? 'invert(53%) sepia(92%) saturate(1624%) hue-rotate(126deg) brightness(104%) contrast(91%)' : ''}`}}/></button>
           <button onClick={() => {player.prev() ; setCurrentTrack(player.getInfo())}}>⏮</button>
           <button onClick={() => {
             player.toggle();
@@ -273,7 +272,7 @@ function PlayerBar({
               {isPlaying ? '⏸' : '▶'}
           </button>
           <button onClick={() => {player.next() ; setCurrentTrack(player.getInfo())}}>⏭</button>
-          <button onClick={() => {player.shuffle()}} style={{display:'flex',justifyContent:'center',alignItems:'end'}}><img src={shuffleIcon} style={{height:'30px', filter:`${isShuffled ? 'invert(53%) sepia(92%) saturate(1624%) hue-rotate(126deg) brightness(104%) contrast(91%)' : ''}`}}/></button>
+          <button onClick={() => {player.shuffle()}} style={{display:'flex',justifyContent:'center',alignItems:'end'}}><img alt='shuffleIcon' src={shuffleIcon} style={{height:'30px', filter:`${isShuffled ? 'invert(53%) sepia(92%) saturate(1624%) hue-rotate(126deg) brightness(104%) contrast(91%)' : ''}`}}/></button>
         </div>
         <div className='player-bar__timeline'>
           {currentTime > 0 ? <span><p>{Math.floor(currentTime / 60)}:{Math.floor(currentTime % 60).toString().padStart(2, '0')}</p></span> : <span style={{marginBottom:'5px'}}>-:--</span> }
