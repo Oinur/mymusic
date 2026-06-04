@@ -20,7 +20,7 @@ export function Notification({text} : {text : string}) {
                         <p className="notification__text">
                             {text}
                         </p>
-                        <img src={successIcon} className='notification__success-image'/>
+                        <img src={successIcon} className='notification__success-image' alt='successIcon'/>
                     </div>
                 </div>
                 

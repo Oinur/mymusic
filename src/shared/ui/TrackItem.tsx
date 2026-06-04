@@ -59,13 +59,14 @@ export function TrackItem( {track, onPlay} : {track: Track; onPlay?: (track: Tra
                         src={waveIcon}
                         className='track__auditionImg'
                         style={{marginTop:'2px'}}
+                        alt='waveIcon'
                     />
                     <p>{(track.auditions).toLocaleString()}</p>
                 </span>
             </div>
             <div>
                 <div className='track__duration-container'>
-                        <img src={timeImg} className='track__duration-img'/>
+                        <img src={timeImg} className='track__duration-img' alt='timeImg'/>
                       <p>{Math.floor(track.duration / 60)}:{Math.floor(track.duration % 60).toString().padStart(2, '0')}</p>     
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { Albums, Track } from "../../music/musicDB";
+
 import '../../styles/genrePage.scss'
 import { TrackItem } from "../../shared/ui/TrackItem";
 import { player } from "../../player/player";
@@ -21,6 +21,7 @@ export default function GenrePage(){
                 <img
                     className="genre__cover"
                     src={genre?.cover}
+                    alt='genre-cover'
                 />
                 <h1 className="genre__name">
                     {genre?.title}
