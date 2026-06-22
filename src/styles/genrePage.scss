@@ -6,14 +6,43 @@
     align-items: center;
     row-gap: 20px;
 }
+.genre{
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(30, 215, 170, 0.6),
+      transparent 500px
+    );
+}
 
-.genre__info{
+.genre__info-container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.genre__info{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.genre__about{
+    margin-bottom: 10px;
+}
+.genre__timeImg{
+    height: 20px;
+}
 .genre__name{
+    left:20px;
+    bottom: 10px;
+    position: absolute;
     color: white;
+    z-index: 101;
+    font-size: 75px;
+    text-shadow: 1px 1px 15px black;
+}
+.genre__cover-container{
+    position: relative;
 }
 .genre__cover{
     aspect-ratio: 1/1;
@@ -22,6 +51,7 @@
     object-fit:cover;
     object-position: top;
     box-shadow: 0px 0px 1px white;
+    
 }
 .genre__tracks-section{
     width: 60%;

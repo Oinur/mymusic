@@ -21,7 +21,10 @@ import kda from '../images/kda.jpg'
 import kdaAlbum from '../images/kda-album.png'
 import emoOranges from '../images/emotionalOranges.png'
 import emoOrangesAlbum from '../images/emotionalOranges-album.png'
-
+import tchaikovsky from '../images/tchaikovsky.jpg'
+import tchaikovskyAlbum from '../images/tchaikovsky-album.jpg'
+import louis from '../images/louis.jpg'
+import louisAlbum from '../images/louis-album.jpg'
 
 import popCover from '../images/pop-music-cover.jpeg'
 import rockCover from '../images/rock-music-cover.jpg'
@@ -52,6 +55,8 @@ import systemOfADownBackground from '../images/systemOfADown-background.jpg'
 import mikuBackground from '../images/miku-background.jpg'
 import kdaBackground from '../images/kda-background.jpg'
 import emoOrangesBackground from '../images/emotionalOranges-background.jpg'
+import tchaikovskyBackground from '../images/tchaikovsky-background.jpg'
+import louisBackground from '../images/louis-background.jpg'
 
 export type Track = {
     id: number;
@@ -79,12 +84,12 @@ export type Genre = {
     title : string,
     cover : string,
     backgroundCover : string,
+    aboutText? : string,
 }
 
 
 export const Tracks : Track[] = [
     {id: 1,name : "Dust", author : 'Hotline Miami 2', src: '../music/Dust.mp3', duration : 302, album_img: HM2_album, albumId: 1, auditions: 100245992, tags:['videogame', 'electronic']},
-    {id: 2,name : 'Winter', author : 'Clark', src:'../music/song1.mp3', duration : 188, auditions: 70085231, tags:['videogame', 'electronic']},
     {id: 3,name: "Future club", author : 'Hotline Miami 2', src:'../music/future-club.mp3', duration : 289, album_img: HM2_album, albumId: 1, auditions: 80425442, tags:['videogame', 'electronic']},
     {id: 4,name: "Opening theme", author : 'Hotline Miami 2', src:'../music/HM2-opening.mp3', duration : 219, album_img: HM2_album, albumId: 1, auditions: 93129883, tags:['videogame', 'electronic']},
     {id: 5,name: "Divide", author : 'Hotline Miami 2', src:'../music/HM2-divide.mp3', duration : 256, album_img: HM2_album, albumId: 1, auditions: 120633922, tags:['videogame', 'electronic']},
@@ -103,14 +108,14 @@ export const Tracks : Track[] = [
     {id: 18,name: "I Feel It Coming", author : 'The Weeknd', src:'../music/The_Weeknd-I_Feel_It_Coming.mp3', duration : 269, album_img: WeendAlbum, albumId: 2, auditions: 3077499050, tags:['pop']},
     {id: 19,name: "Save Your Tears", author : 'The Weeknd', src:'../music/The_Weeknd-Save_Your_Tears.mp3', duration : 215, album_img: WeendAlbum, albumId: 2, auditions: 3077499050, tags:['pop']},
     {id: 20,name: "The Hills", author : 'The Weeknd', src:'../music/The_Weeknd-The_Hills.mp3', duration : 242, album_img: WeendAlbum, albumId: 2, auditions: 3077499050, tags:['pop']},
-    {id: 21,name: "1-800", author : 'Bbno$', src:'../music/bbno-1-800.mp3', duration : 209, album_img: BbnoAlbum, albumId: 4, auditions: 148554426, tags:['rap', 'pop']},
-    {id: 22,name: "check", author : 'Bbno$', src:'../music/bbno-check.mp3', duration : 122, album_img: BbnoAlbum, albumId: 4, auditions: 127666939, tags:['rap', 'pop']},
-    {id: 23,name: "come to brazil", author : 'Bbno$', src:'../music/bbno-come_to_brazil.mp3', duration : 133, album_img: BbnoAlbum, albumId: 4, auditions: 21256547, tags:['rap', 'pop']},
-    {id: 24,name: "edamame", author : 'Bbno$', src:'../music/Bbno-edamame.mp3', duration : 133, album_img: BbnoAlbum, albumId: 4, auditions: 672772580, tags:['rap', 'pop']},
-    {id: 25,name: "hot topic", author : 'Bbno$', src:'../music/Bbno-hot_topic.mp3', duration : 115, album_img: BbnoAlbum, albumId: 4, auditions: 56884234, tags:['rap', 'pop']},
-    {id: 26,name: "NSFW", author : 'Bbno$', src:'../music/Bbno-NSFW.mp3', duration : 146, album_img: BbnoAlbum, albumId: 4, auditions: 120624953, tags:['rap', 'pop']},
-    {id: 27,name: "two", author : 'Bbno$', src:'../music/bbno-two.mp3', duration : 135, album_img: BbnoAlbum, albumId: 4, auditions: 190536878, tags:['rap', 'pop']},
-    {id: 28,name: "u mad", author : 'Bbno$', src:'../music/bbno-u_mad.mp3', duration : 151, album_img: BbnoAlbum, albumId: 4, auditions: 80772953, tags:['rap', 'pop']},
+    {id: 21,name: "1-800", author : 'bbno$', src:'../music/bbno-1-800.mp3', duration : 209, album_img: BbnoAlbum, albumId: 4, auditions: 148554426, tags:['rap', 'pop']},
+    {id: 22,name: "check", author : 'bbno$', src:'../music/bbno-check.mp3', duration : 122, album_img: BbnoAlbum, albumId: 4, auditions: 127666939, tags:['rap', 'pop']},
+    {id: 23,name: "come to brazil", author : 'bbno$', src:'../music/bbno-come_to_brazil.mp3', duration : 133, album_img: BbnoAlbum, albumId: 4, auditions: 21256547, tags:['rap', 'pop']},
+    {id: 24,name: "edamame", author : 'bbno$', src:'../music/Bbno-edamame.mp3', duration : 133, album_img: BbnoAlbum, albumId: 4, auditions: 672772580, tags:['rap', 'pop']},
+    {id: 25,name: "hot topic", author : 'bbno$', src:'../music/Bbno-hot_topic.mp3', duration : 115, album_img: BbnoAlbum, albumId: 4, auditions: 56884234, tags:['rap', 'pop']},
+    {id: 26,name: "NSFW", author : 'bbno$', src:'../music/Bbno-NSFW.mp3', duration : 146, album_img: BbnoAlbum, albumId: 4, auditions: 120624953, tags:['rap', 'pop']},
+    {id: 27,name: "two", author : 'bbno$', src:'../music/bbno-two.mp3', duration : 135, album_img: BbnoAlbum, albumId: 4, auditions: 190536878, tags:['rap', 'pop']},
+    {id: 28,name: "u mad", author : 'bbno$', src:'../music/bbno-u_mad.mp3', duration : 151, album_img: BbnoAlbum, albumId: 4, auditions: 80772953, tags:['rap', 'pop']},
     {id: 29,name: "Diver", author : 'Dave the diver', src:'../music/Dave the Diver OST - Diver.mp3', duration : 105, album_img: dvdAlbum, albumId: 5, auditions: 34967295, tags:['videogame']},
     {id: 30,name: "Gardening And Things", author : 'Dave the diver', src:'../music/Dave the Diver OST — Gardening And Things.mp3', duration : 83, album_img: dvdAlbum, albumId: 5, auditions: 34967295, tags:['videogame']},
     {id: 31,name: "On the boat", author : 'Dave the diver', src:'../music/Dave the Diver OST - On the boat.mp3', duration : 72, album_img: dvdAlbum, albumId: 5, auditions: 34967295, tags:['videogame']},
@@ -157,20 +162,33 @@ export const Tracks : Track[] = [
     {id: 72,name: "DRUM GO DUM", author : 'K/DA', src:'../music/KDA_Wolftyla_Bekuh_BOOM_ALUNA_League_of_Legends_-_DRUM_GO_DUM.mp3', duration : 200, album_img: kdaAlbum, albumId: 11, auditions: 266994117, tags:['kPop']},
     {id: 73,name: "MGICALCURE LOVE SHOT", author : 'Hatsune Miku', src:'../music/SAWTOWNE_feat_Hatsune_Miku_-_MGICALCURE_LOVE_SHOT_78366557.mp3', duration : 202, album_img: mikuAlbum, albumId: 10, auditions: 266994117, tags:['jPop', 'electronic']},
 
-    {id: 74,name: "All That", author : 'Emotional Oranges', src:'../music/Emotional Oranges — All That.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
-    {id: 75,name: "Bounce", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Bounce.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
-    {id: 76,name: "Call It Off", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Call It Off.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
-    {id: 77,name: "Cardigan", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Cardigan.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
-    {id: 78,name: "Corners Of My Mind", author : 'Emotional Oranges', src:'../music/Emotional Oranges - Corners Of My Mind.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
-    {id: 79,name: "Slide All Night", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Slide All Night.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
-    {id: 80,name: "West Coast Love", author : 'Emotional Oranges', src:'../music/Emotional_Oranges_-_West_Coast_Love.mp3', duration : 202, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
+    {id: 74,name: "All That", author : 'Emotional Oranges', src:'../music/Emotional Oranges — All That.mp3', duration : 185, album_img: emoOrangesAlbum, albumId: 12, auditions: 250772991, tags:['indie']},
+    {id: 75,name: "Bounce", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Bounce.mp3', duration : 172, album_img: emoOrangesAlbum, albumId: 12, auditions: 113005219, tags:['indie']},
+    {id: 76,name: "Call It Off", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Call It Off.mp3', duration : 216, album_img: emoOrangesAlbum, albumId: 12, auditions: 111633820, tags:['indie']},
+    {id: 77,name: "Cardigan", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Cardigan.mp3', duration : 190, album_img: emoOrangesAlbum, albumId: 12, auditions: 78153882, tags:['indie']},
+    {id: 78,name: "Corners Of My Mind", author : 'Emotional Oranges', src:'../music/Emotional Oranges - Corners Of My Mind.mp3', duration : 212, album_img: emoOrangesAlbum, albumId: 12, auditions: 266994117, tags:['indie']},
+    {id: 79,name: "Slide All Night", author : 'Emotional Oranges', src:'../music/Emotional Oranges — Slide All Night.mp3', duration : 175, album_img: emoOrangesAlbum, albumId: 12, auditions: 37228452, tags:['indie']},
+    {id: 80,name: "West Coast Love", author : 'Emotional Oranges', src:'../music/Emotional_Oranges_-_West_Coast_Love.mp3', duration : 215, album_img: emoOrangesAlbum, albumId: 12, auditions: 115736733, tags:['indie']},
+
+    {id: 81,name: "Испанский танец", author : 'Чайковский', src:'../music/chajjkovskijj-ispanskijj-tanec.mp3', duration : 139, album_img: tchaikovskyAlbum, albumId: 13, auditions: 308005187, tags:['classic']},
+    {id: 82,name: "Полька дял танцев", author : 'Чайковский', src:'../music/chajjkovskijj-polka-dlja-tancev.mp3', duration : 279, album_img: tchaikovskyAlbum, albumId: 13, auditions: 188900206, tags:['classic']},
+    {id: 83,name: "Танец феи драже", author : 'Чайковский', src:'../music/chajjkovskijj-tanec-fei-drazhe.mp3', duration : 124, album_img: tchaikovskyAlbum, albumId: 13, auditions: 234578967, tags:['classic']},
+    {id: 84,name: "Танец маленьких лебедей", author : 'Чайковский', src:'../music/chajjkovskijj-tanec-malenkikh-lebedejj.mp3', duration : 101, album_img: tchaikovskyAlbum, albumId: 13, auditions: 277234962, tags:['classic']},
+    {id: 85,name: "Вальс цветов", author : 'Чайковский', src:'../music/chajjkovskijj-vals-cvetov.mp3', duration : 428, album_img: tchaikovskyAlbum, albumId: 13, auditions: 378656828, tags:['classic']},
+
+    {id: 86,name: "Hello Brother", author : 'Louis Armstrong', src:'../music/Louis_Armstrong_And_The_All-Stars_-_Hello_Brother_47937315.mp3', duration : 209, album_img: louisAlbum, albumId: 14, auditions: 378656828, tags:['jazz']},
+    {id: 87,name: "What A Wonderful World", author : 'Louis Armstrong', src:'../music/Louis_Armstrong_Louis_Armstrong_-_What_A_Wonderful_World_47937264.mp3', duration : 138, album_img: louisAlbum, albumId: 14, auditions: 378656828, tags:['jazz']},
+    {id: 88,name: "Hello Dolly", author : 'Louis Armstrong', src:'../music/Louis_Armstrong_Louis_Armstrong_And_The_All-Stars_-_Hello_Dolly_47937173.mp3', duration : 144, album_img: louisAlbum, albumId: 14, auditions: 378656828, tags:['jazz']},
+    {id: 89,name: "Someday", author : 'Louis Armstrong', src:'../music/Louis_Armstrong_Louis_Armstrong_And_The_All-Stars_-_Someday_47937276.mp3', duration : 221, album_img: louisAlbum, albumId: 14, auditions: 378656828, tags:['jazz']},
+    {id: 90,name: "You Are Woman I Am Man", author : 'Louis Armstrong', src:'../music/Louis_Armstrong_Louis_Armstrong_And_The_All-Stars_-_You_Are_Woman_I_Am_Man_47937286.mp3', duration : 137, album_img: louisAlbum, albumId: 14, auditions: 378656828, tags:['jazz']},
+    {id: 91,name: "Moon River", author : 'Louis Armstrong', src:'../music/Louis_Armstrong_The_All-Stars_-_Moon_River_47937261.mp3', duration : 180, album_img: louisAlbum, albumId: 14, auditions: 378656828, tags:['jazz']},
 ]
 
 export const Albums : Album[] = [
-    {id : 1, title : 'Hotline Miami 2', album_cover : HM2_album, subscribers: 624000, background_cover : hm2Background},
-    {id : 2, title : 'The Weeknd', album_cover : Weeknd, subscribers: 120899344, background_cover : weekndBackground},
-    {id : 3, title : 'Eminem', album_cover : Eminem, subscribers: 70899245, background_cover : eminemBackground},
-    {id : 4, title : 'bbno$', album_cover : Bbno, subscribers: 18534986, background_cover : bbnoBackground},
+    {id : 1, title : 'Hotline Miami 2', album_cover : HM2_album, subscribers: 624000, background_cover : hm2Background, aboutText:'Best songs and music from Hotline Miami 2'},
+    {id : 2, title : 'The Weeknd', album_cover : Weeknd, subscribers: 120899344, background_cover : weekndBackground, aboutText:'The Weeknd took over pop music & culture on his own terms filtering R&B, Pop, & hip-hop through an ambitious widescreen lens'},
+    {id : 3, title : 'Eminem', album_cover : Eminem, subscribers: 70899245, background_cover : eminemBackground, aboutText:'Apart from being one of the best-selling artists in music history, Eminem is one of the greatest rappers of his generation. He`s effortlessly fast, fluid, dexterous, and unpredictable, capable of pulling off long-form narratives or withering asides'},
+    {id : 4, title : 'bbno$', album_cover : Bbno, subscribers: 18534986, background_cover : bbnoBackground, aboutText:'it`s baby no money'},
     {id : 5, title : 'Dave the diver', album_cover : dvd, subscribers: 18534986, background_cover : dvdBackground},
     {id : 6, title : 'DOOM', album_cover : Doom, subscribers: 5678933677, background_cover : doomBackground},
     {id : 7, title : 'Mewgenics', album_cover : Mewgenics, subscribers: 2543886, background_cover : mewgenicsBackground},
@@ -189,23 +207,26 @@ Team Fortress 2 — культовый командный шутер от Valve,
 Музыка TF2 до сих пор считается одной из самых харизматичных среди многопользовательских игр.
 `
     },
-    {id : 9, title : 'System Of A Down', album_cover : systemOfADown, subscribers: 26050244, background_cover : systemOfADownBackground},
+    {id : 9, title : 'System Of A Down', album_cover : systemOfADown, subscribers: 26050244, background_cover : systemOfADownBackground, aboutText:'Striking a balance between 80s underground thrash metal and metallic early-90s alternative rock, Armenian-American quartet System of a Down effictively pushed their socially conscious, politically chatged messages into the mosh pits during the turn of the sentury`s nu-metal wave'},
     {id : 10, title : 'Hatsune Miku', album_cover : miku, subscribers: 14553467, background_cover : mikuBackground},
-    {id : 11, title : 'K/DA', album_cover : kda, subscribers: 6605442, background_cover : kdaBackground, background_position:'center'},
-    {id : 12, title : 'Emotional Oranges', album_cover : emoOranges, subscribers: 3934963, background_cover : emoOrangesBackground, background_position:'center'},
+    {id : 11, title : 'K/DA', album_cover : kda, subscribers: 6605442, background_cover : kdaBackground, background_position:'center', aboutText:'With a lively and hard-hitting sound rich in K-Pop, hip-hop, and EDM influences, K/DA exploded onto the music scene in 2018 with their hit song "POP/STARS". Fans couldn`t get enough of their unconventional flair, bold personalities, and distinct mix of global pop styles'},
+    {id : 12, title : 'Emotional Oranges', album_cover : emoOranges, subscribers: 3934963, background_cover : emoOrangesBackground, background_position:'center', aboutText:'Text us: 310-620-1210'},
+    {id : 13, title : 'Пётр Ильич Чайковский', album_cover : tchaikovsky, subscribers: 9772640, background_cover : tchaikovskyBackground, background_position:'center', aboutText:'Чайковский является одним из величайших композиторов мира, ярким представителем музыкального романтизма и одним из выдающихся лириков и драматургов-психологов в музыке, углубившимся в психологический анализ сложных и противоречивых явлений жизни.'},
+    {id : 14, title : 'Louis Armstrong', album_cover : louis, subscribers: 9772640, background_cover : louisBackground, background_position:'center', aboutText:'Louis was an American jazz and blues trumpeter and vocalist. Among the most influential figures in jazz, his career spanned five decades and several eras in the history of the genre. Armstrong received numerous accolades including the Grammy Award for Best Male Vocal Performance for Hello, Dolly! in 1965, as well as a posthumous win for the Grammy Lifetime Achievement Award in 1972. His influence crossed musical genres, with inductions into the DownBeat Jazz Hall of Fame, the Rock and Roll Hall of Fame, and the National Rhythm & Blues Hall of Fame, among others.'},
 ]
 
 
 export const Genres : Genre[] = [
-    {id : 'pop', title : 'Поп', cover : popCover, backgroundCover : popBackground},
-    {id : 'jPop', title : 'J-Pop', cover : jpopCover, backgroundCover : rapBackground},
-    {id : 'kPop', title : 'K-Pop', cover : kpopCover, backgroundCover : rapBackground},
-    {id : 'rock', title : 'Рок', cover : rockCover, backgroundCover : rockBackground},
-    {id : 'electronic', title : 'Электроника', cover : electronicCover, backgroundCover : electronicBackground},
-    {id : 'classic', title : 'Классика', cover : classicCover, backgroundCover : classicBackground},
-    {id : 'rap', title : 'Рэп', cover : rapCover, backgroundCover : rapBackground},
-    {id : 'jazz', title : 'Джаз', cover : jazzCover, backgroundCover : gamingBackground },
-    {id : 'indie', title : 'Инди', cover : indieCover, backgroundCover : gamingBackground},
-    {id : 'videogame', title : 'Игровые', cover : gamingCover, backgroundCover : gamingBackground},
+    {id : 'pop', title : 'Поп', cover : popCover, backgroundCover : popBackground, aboutText:'Поп — жанр популярной музыки, сочетающий запоминающиеся мелодии, простые структуры песен и современное звучание.'},
+    {id : 'jPop', title : 'J-Pop', cover : jpopCover, backgroundCover : rapBackground, aboutText:'Японская поп-музыка с запоминающимися мелодиями, уникальной культурой исполнения и большим влиянием аниме и медиа.'},
+    {id : 'kPop', title : 'K-Pop', cover : kpopCover, backgroundCover : rapBackground, aboutText:'Южнокорейская поп-музыка, сочетающая яркие выступления, современное продюсирование и разнообразие музыкальных стилей.'},
+    {id : 'rock', title : 'Рок', cover : rockCover, backgroundCover : rockBackground, aboutText:'Энергичный жанр, основанный на гитарном звучании, живых инструментах и мощной подаче.'},
+    {id : 'electronic', title : 'Электроника', cover : electronicCover, backgroundCover : electronicBackground, aboutText:'Музыка, создаваемая с использованием электронных инструментов и современных технологий.'},
+    {id : 'classic', title : 'Классика', cover : classicCover, backgroundCover : classicBackground, aboutText:'Произведения великих композиторов, проверенные временем и ставшие частью мировой культуры.'},
+    {id : 'rap', title : 'Рэп', cover : rapCover, backgroundCover : rapBackground, aboutText:'Жанр, в котором главную роль играют ритм, речитатив и выразительные тексты.'},
+    {id : 'jazz', title : 'Джаз', cover : jazzCover, backgroundCover : gamingBackground, aboutText:'Импровизация, сложные гармонии и богатое инструментальное звучание являются основой джаза.' },
+    {id : 'indie', title : 'Инди', cover : indieCover, backgroundCover : gamingBackground,aboutText:'Независимая музыка, отличающаяся творческой свободой и уникальным звучанием.'},
+    {id : 'videogame', title : 'Игровые', cover : gamingCover, backgroundCover : gamingBackground, aboutText:'Композиции из видеоигр, которые помогают погрузиться в игровой мир и запоминаются на годы.'},
     
 ]
+

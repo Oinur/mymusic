@@ -104,7 +104,7 @@ export default function AlbumPage(){
             <div className="album__banner" style={{
                 '--bg': `url(${album[0].background_cover})`
             } as React.CSSProperties}>
-                <h1 style={{zIndex:'2', color:'white'}}>{album[0].title}</h1>
+                <h1 style={{zIndex:'2', color:'white', fontSize:'90px'}}>{album[0].title}</h1>
                 <p style={{zIndex:'2', color:'white'}}>
                     {album[0].aboutText}
                 </p>
