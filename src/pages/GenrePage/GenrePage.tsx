@@ -6,7 +6,6 @@ import { Tracks } from "../../music/musicDB";
 import { Genres } from "../../music/musicDB";
 import { Track } from '../../music/musicDB';
 import timeImg from '../../images/clock-icon.svg'
-import { time } from 'console';
 
 
 export default function GenrePage(){
